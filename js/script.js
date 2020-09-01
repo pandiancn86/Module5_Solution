@@ -158,9 +158,10 @@ dc.loadMenuCategories = function () {
 // Load the menu items view
 // 'categoryShort' is a short_name for a category
 dc.loadMenuItems = function (categoryShort) {
-  gtag('config', 'UA-176937904-1',{
-    'page-title':'Menuitems',
-    'page-Url':'/menuitems'
+  gtag('event', 'MenuItemClick', {
+    'event_category':'MenuItems',
+    'event_label': 'Menuitems',
+    'value': categoryShort
   });
   showLoading("#main-content");
   $ajaxUtils.sendGetRequest(
