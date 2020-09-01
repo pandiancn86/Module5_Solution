@@ -144,6 +144,10 @@ function chooseRandomCategory (categories) {
 
 // Load the menu categories view
 dc.loadMenuCategories = function () {
+  gtag('config', 'UA-176937904-1',{
+    'page-title':'Menu',
+    'page-Url':'/menu'
+  });
   showLoading("#main-content");
   $ajaxUtils.sendGetRequest(
     allCategoriesUrl,
@@ -154,6 +158,10 @@ dc.loadMenuCategories = function () {
 // Load the menu items view
 // 'categoryShort' is a short_name for a category
 dc.loadMenuItems = function (categoryShort) {
+  gtag('config', 'UA-176937904-1',{
+    'page-title':'Menuitems',
+    'page-Url':'/menuitems'
+  });
   showLoading("#main-content");
   $ajaxUtils.sendGetRequest(
     menuItemsUrl + categoryShort,
